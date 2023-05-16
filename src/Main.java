@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
+        task1_2();
         task3();
         task4();
         task5();
@@ -11,105 +10,120 @@ public class Main {
 
     }
 
-    public static void task1 () {
-        System.out.println("Задача 1");
-         // При выполнении каждого условия программа должна выводить в консоль
-        // сообщение в формате: «Если возраст человека равен …, то
-        // (вывести в зависимости от результата) он совершеннолетний /
-        //он не достиг совершеннолетия, нужно немного подождать».
+    public static void task1_2 () {
+        System.out.println("Задача 1-2");
+    //Напишите программу, которая определяет, чем пользуется клиент
+        // (iOS или Android), и выдает соответствующее сообщение:
 
-        int age = 19;
+        int versia = 0;
+        int clientDeviceYear = 2015;
+        if (versia == 1) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию для Android.");
+            }
+            else {
+                System.out.println("Установите обычную версию для Android.");
+            }
 
-        if (age < 18) {
-            System.out.println("Если возраст человека равен " + age +
-                    ", то он не достиг совершеннолетия, нужно немного подождать.");
-        }   else {
-            System.out.println("Если возраст человека равен " +age +
-                    ", то он совершеннолетний.");
         }
 
-    }
-
-    public static void task2 () {
-        System.out.println("Задача 2");
-         // При выполнении каждого условия выведите в консоль:
-        // «На улице … градусов, (вывести в зависимости от результата)
-        // нужно надеть шапку / можно идти без шапки».
-        int weather = 16;
-        if (weather >= 5) {
-            System.out.println("На улице " + weather +
-                    " градусов, можно идти без шапки.");
-        } else {
-            System.out.println("На улице " + weather +
-                    " градусов, нужно надеть шапку.");
+        else {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию для iOS.");
+            }
+            else {
+                System.out.println("Установите обычную версию для iOS.");
+            }
         }
     }
 
     public static void task3 () {
         System.out.println("Задача 3");
-         // При выполнении каждого условия программа должна выводить такое сообщение:
-        // «Если скорость …, то (вывести в зависимости от результата)
-        // придется заплатить штраф / можно ездить спокойно».
-        int speed = 78;
-        if (speed > 60) {
-            System.out.println("Если скорость " + speed +
-                    "км/ч, то придётся заплатить штраф.");
-        }   else {
-            System.out.println("Если скорость " + speed +
-                    "км/ч, то можно ездить спокойно.");
+    //Напишите программу, которая определяет, является ли год високосным или нет.
+
+        int year = 2010;
+        if (year % 4 == 0) {
+            if (year %100 == 0 ) {
+                if (year % 400 == 0) {
+                    System.out.println(year + " - високосный год.");
+                }   else {
+                    System.out.println(year + " - не високосный год.");
+                }
+
+            }
+
+            else {
+                System.out.println(year + " - високосный год.");
+            }
+
         }
 
+        else {
+            System.out.println(year + " - не високосный год.");
+        }
     }
 
     public static void task4 () {
         System.out.println("Задача 4");
-         // При выполнении каждого условия программа должна выводить в консоль
-        // сообщение в формате: «Если возраст человека равен …, то ему нужно ходить
-        // … (в зависимости от возраста дописать нужное)».
-
-        int age4 = 16;
-        boolean sleep = age4 < 2;
-        boolean sad = age4 >=2 && age4 <=6;
-        boolean school = age4 >=7 && age4 <=18;
-        boolean univer = age4 > 18 && age4 < 24;
-
-        if (sleep) {
-            System.out.println("Если возраст человека равен " + age4 +
-                    ", то ему рано в дет.сад и надо спать.");
-        }   else if (sad) {
-            System.out.println("Если возраст человека равен " + age4 +
-                    ", то ему нужно ходить в детский сад.");
-        }   else if (school) {
-            System.out.println("Если возраст человека равен " + age4 +
-                    ", то ему нужно ходить в школу.");
-        }   else if (univer) {
-            System.out.println("Если возраст человека равен " + age4 +
-                    ", то ему нужно ходить в университет.");
-        }   else {
-            System.out.println("Если возраст человека раеен " + age4 +
-                    ", то ему нужно ходить на работу.");
+    //Напишите программу, которая выдает сообщение в консоль:
+    // "Потребуется дней: " + срок доставки.
+        int deliveryDistance = 95;
+        if (deliveryDistance < 20) {
+            System.out.println("Для доставки потребуется дней: 1.");
+        }   else if (deliveryDistance < 60) {
+            System.out.println("Для доставки потребуется дней: 2.");
+            } else if (deliveryDistance < 100) {
+            System.out.println("Для доставки потребуется дней: 3.");
+            } else {
+            System.out.println("Доставки нет.");
         }
-
     }
 
 
     public static void task5 () {
         System.out.println("Задача 5");
-         // Напишите программу, которая выводит в консоль сообщение в формате:
-        // «Если возраст ребенка равен …, то ему … (в зависимости от возраста
-        // дописать нужное: нельзя кататься на аттракционе,
-        // можно кататься на аттракционе в сопровождении /
-        // без сопровождения взрослого)».
-        int age5 = 12;
-        if (age5 < 5) {
-            System.out.println("Если возраст ребенка равен" +age5+
-                    ", то ему нельзя кататься на аттракционах.");
-        }   else if (age5 >= 5 && age5 <= 14) {
-            System.out.println("Если возраст ребенка равен " + age5 +
-                    ", то ему можно кататься на аттракционах в сопровождении взрослого.");
-        }   else {
-            System.out.println("Если возраст ребенка равен " + age5 +
-                    ", то ему можно кататься на аттракционах без сопровождения взрослого.");
+        //Напишите программу, которая определяет по номеру месяца в году,
+        // к какому сезону этот месяц принадлежит.
+        int monthNumber = 11;
+        switch (monthNumber) {
+            case 1:
+                System.out.println(monthNumber + "-й месяц это зима.");
+                break;
+            case 2:
+                System.out.println(monthNumber + "-й месяц это зима.");
+                break;
+            case 3:
+                System.out.println(monthNumber + "-й месяц это весна.");
+                break;
+            case 4:
+                System.out.println(monthNumber + "-й месяц это весна.");
+                break;
+            case 5:
+                System.out.println(monthNumber + "-й месяц это весна.");
+                break;
+            case 6:
+                System.out.println(monthNumber + "-й месяц это лето.");
+                break;
+            case 7:
+                System.out.println(monthNumber + "-й месяц это лето.");
+                break;
+            case 8:
+                System.out.println(monthNumber + "-й месяц это лето.");
+                break;
+            case 9:
+                System.out.println(monthNumber + "-й месяц это осень.");
+                break;
+            case 10:
+                System.out.println(monthNumber + "-й месяц это осень.");
+                break;
+            case 11:
+                System.out.println(monthNumber + "-й месяц это осень.");
+                break;
+            case 12:
+                System.out.println(monthNumber + "-й месяц это зима.");
+                break;
+            default:
+                System.out.println("Такого месяца не существует!");
         }
 
     }
@@ -117,41 +131,13 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
-        // С помощью условного оператора и конструкции else напишите программу,
-        // которая выводит в консоль сообщение о том, есть ли место в вагоне,
-        // сидячее или стоячее, или вагон уже полностью забит.
-        int nomer = 54;
-        boolean seat = nomer <= 60;
-        boolean stay = nomer > 60 && nomer <= 102;
-        if (seat) {
-            System.out.println("Вам досталось сидячее место, его номер в вагоне - "
-                    + nomer);
-        }   else if (stay) {
-            System.out.println("Вам досталось стоячее место, его номер в вагоне - "
-                    + nomer);
-        }   else {
-            System.out.println("К сожалению, вам не досталось места в вагоне." );
-        }
-
-
+        //
     }
 
 
     public static void task7 () {
         System.out.println("Задача 7");
-        // С помощью условного оператора и конструкции else напишите программу,
-        // которая вычисляет, какое из трех чисел бо́льшее, и выводит результат в консоль.
-        int one = 34;
-        int two = 14;
-        int three = 69;
-
-        if (one > two && one > three) {
-            System.out.println("Первое число больше второго и третьего.");
-        }   else if (two > one && two > three) {
-            System.out.println("Второе число больше первого и третьего.");
-        }   else {
-            System.out.println("Третье число больше первого и второго.");
-        }
+        //
 
     }
 
