@@ -4,9 +4,6 @@ public class Main {
         task3();
         task4();
         task5();
-        task6();
-        task7();
-
 
     }
 
@@ -41,25 +38,11 @@ public class Main {
         System.out.println("Задача 3");
     //Напишите программу, которая определяет, является ли год високосным или нет.
 
-        int year = 2010;
-        if (year % 4 == 0) {
-            if (year %100 == 0 ) {
-                if (year % 400 == 0) {
-                    System.out.println(year + " - високосный год.");
-                }   else {
-                    System.out.println(year + " - не високосный год.");
-                }
-
-            }
-
-            else {
-                System.out.println(year + " - високосный год.");
-            }
-
-        }
-
-        else {
-            System.out.println(year + " - не високосный год.");
+        int year = 2003;
+        if (year%400 == 0 || year%4 == 0 && year%100 != 0) {
+            System.out.println(year + "-й год является високосным.");
+        } else {
+            System.out.println(year + "-й год HE является високосным.");
         }
     }
 
@@ -87,41 +70,26 @@ public class Main {
         int monthNumber = 11;
         switch (monthNumber) {
             case 1:
-                System.out.println(monthNumber + "-й месяц это зима.");
-                break;
             case 2:
+            case 12:
                 System.out.println(monthNumber + "-й месяц это зима.");
                 break;
             case 3:
-                System.out.println(monthNumber + "-й месяц это весна.");
-                break;
             case 4:
-                System.out.println(monthNumber + "-й месяц это весна.");
-                break;
             case 5:
                 System.out.println(monthNumber + "-й месяц это весна.");
                 break;
             case 6:
-                System.out.println(monthNumber + "-й месяц это лето.");
-                break;
             case 7:
-                System.out.println(monthNumber + "-й месяц это лето.");
-                break;
             case 8:
                 System.out.println(monthNumber + "-й месяц это лето.");
                 break;
             case 9:
-                System.out.println(monthNumber + "-й месяц это осень.");
-                break;
             case 10:
-                System.out.println(monthNumber + "-й месяц это осень.");
-                break;
             case 11:
                 System.out.println(monthNumber + "-й месяц это осень.");
                 break;
-            case 12:
-                System.out.println(monthNumber + "-й месяц это зима.");
-                break;
+
             default:
                 System.out.println("Такого месяца не существует!");
         }
@@ -129,17 +97,9 @@ public class Main {
     }
 
 
-    public static void task6 () {
-        System.out.println("Задача 6");
-        //
-    }
 
 
-    public static void task7 () {
-        System.out.println("Задача 7");
-        //
 
-    }
 
 
 
